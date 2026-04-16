@@ -1,20 +1,12 @@
-import React, { useEffect } from 'react';
-import { BrowserRouter as Router, Routes, Route, useLocation } from 'react-router-dom';
+import React from 'react';
+import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import Navbar from './components/Navbar';
 import Home from './pages/Home';
 import Menu from './pages/Menu';
 import Product from './pages/Product';
 import Cart from './pages/Cart';
+import ScrollToTop from './components/ScrollToTop';
 import { AnimatePresence } from 'framer-motion';
-
-// Scroll to top on route change
-const ScrollToTop = () => {
-  const { pathname } = useLocation();
-  useEffect(() => {
-    window.scrollTo(0, 0);
-  }, [pathname]);
-  return null;
-};
 
 function App() {
   return (
@@ -39,7 +31,7 @@ function App() {
           </p>
           <div className="mt-4 flex justify-center gap-8 opacity-40 hover:opacity-100 transition-opacity">
             <span className="font-bebas cursor-pointer hover:text-primary transition-colors">INSTAGRAM</span>
-            <span className="font-bebas cursor-pointer hover:text-primary transition-colors">FACBOOK (LIFER)</span>
+            <span className="font-bebas cursor-pointer hover:text-primary transition-colors">FACEBOOK (LIFER)</span>
             <span className="font-bebas cursor-pointer hover:text-primary transition-colors">THE WARDEN'S BLOG</span>
           </div>
         </footer>
